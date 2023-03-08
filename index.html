@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+
+    <title>react</title>
+    <style>
+      #root{
+        width: 100%;
+        height:100vh;
+      }
+      .card{
+        width: 45%;
+        margin-left: 1rem;
+        font-family: sans-serif;
+      }
+      p{
+        margin-bottom: 3rem;
+        color: rgb(39, 39, 39);
+        font-weight: 500;
+      }
+      h1{
+        margin-bottom: 3rem;
+        font-size: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script>
+            let para1="Welcome to the MDN learning area. This set of articles aims to guide complete beginners to web development with all that they need to start coding websites."
+            let para2='The aim of this area of MDN is not to take you from "beginner to "expert but to take you from "beginner" to "comfortable." From there, you should be able to start making your way, learning from the rest of MDN, and other intermediate to advanced resources that assume a lot of previous knowledge.'
+            let para3='If you are a complete beginner web development can be challenging we will hold your hand and provide enough detal for you to feel comfortable and learn the topics properly. You should feel at home whether you are a student learning web development (on your own or as part ot a claSS a teacher looking for class materials, a hobbyist or someone who just wants to understand more about how web technologies work'
+
+            let maindiv=React.createElement('div',{className:"card",},
+            [
+              React.createElement('h1',{className:"heading"},"Learn web development"),
+              React.createElement('p',{className:"para"},para1),
+              React.createElement('p',{className:"para2"},para2),
+              React.createElement('p',{className:"para3"},para3)
+            ]
+            )
+              ReactDOM.render(maindiv,document.getElementById("root"))
+    </script>
+  </body>
+</html>
